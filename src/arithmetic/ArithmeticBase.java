@@ -15,8 +15,14 @@ import java.util.Scanner;
  */
 public class ArithmeticBase 
 {
- public double x,y;
-    double calculate(double x, double y) 
+    private double x,y;
+    
+    public ArithmeticBase(double x, double y){
+        this.x = x;
+        this.y = y;
+    }
+    
+    public double calculate(Scanner in) 
         {
         Scanner sc =new Scanner(System.in);
         System.out.println("Enter arithmetic operation to Perform: ");
@@ -34,6 +40,5 @@ public class ArithmeticBase
             default:
                 throw new AssertionError("Unknown operations " + this);
         }
-    }
-   
+   }
 }
